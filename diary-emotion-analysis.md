@@ -13,7 +13,7 @@
 
 ## 개요
 
-사용자가 작성한 일기 내용을 AI(OpenAI GPT-4 또는 Claude)로 분석하여:
+사용자가 작성한 일기 내용을 AI(Anthropic Claude)로 분석하여:
 - 일기에 포함된 감정을 파악
 - 대표 감정을 선정
 - 해당 감정에 맞는 꽃과 꽃말 제공
@@ -459,8 +459,8 @@ public enum EmotionType {
 ```
 
 #### 3. 최신 LLM의 한국어 성능
-- GPT-4, Claude 3.5/Opus 모두 한국어 처리 우수
-- 영어가 더 정확했던 건 GPT-3 시절
+- Claude 3.5/Opus 한국어 처리 우수
+- 영어가 더 정확했던 건 구형 모델 시절
 
 #### 4. 구현 및 유지보수 용이
 - 번역 레이어 불필요
@@ -510,7 +510,7 @@ public enum EmotionType {
 ## 구현 체크리스트
 
 - [ ] 20개 감정에 대한 꽃 이미지 생성 (3D 스타일, 실사 스타일 각각)
-- [ ] LLM API 연동 (OpenAI 또는 Claude)
+- [ ] LLM API 연동 (Anthropic Claude)
 - [ ] 프롬프트 버전 관리 시스템
 - [ ] DTO 및 Enum 구현
 - [ ] 보안 검증 로직 구현

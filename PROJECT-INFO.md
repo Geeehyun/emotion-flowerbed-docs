@@ -24,7 +24,7 @@ emotion-flowerbed.com
 - **Framework**: Spring Boot 3.x
 - **Database**: MariaDB 10.x
 - **ORM**: JPA (Hibernate)
-- **AI**: OpenAI GPT-4 / Anthropic Claude
+- **AI**: Anthropic Claude
 
 #### Frontend
 - **Framework**: Vue 3
@@ -301,9 +301,9 @@ DB_USERNAME=flowerbed_user
 DB_PASSWORD=your_password
 
 # LLM API
-LLM_PROVIDER=openai
-LLM_API_KEY=your_openai_api_key
-LLM_MODEL=gpt-4
+LLM_PROVIDER=claude
+LLM_API_KEY=your_claude_api_key
+LLM_MODEL=claude-3-5-sonnet-20241022
 
 # Server
 SERVER_PORT=8080

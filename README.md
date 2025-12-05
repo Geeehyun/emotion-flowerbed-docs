@@ -11,7 +11,7 @@
 
 ### 주요 기능
 - 🎨 **일기 작성**: 하루의 이야기를 자유롭게 작성
-- 🤖 **AI 감정 분석**: GPT-4가 20개 감정 중 가장 적합한 감정 선택
+- 🤖 **AI 감정 분석**: Claude가 20개 감정 중 가장 적합한 감정 선택
 - 🌸 **감정별 꽃 선물**: 각 감정마다 어울리는 꽃과 꽃말 제공
 - 🏡 **감정 화단**: 월별로 일기를 화단처럼 시각화
 - 📊 **감정 통계**: 나의 감정 패턴 분석 (예정)
@@ -27,7 +27,7 @@
 
 ### 기술 스택
 ```
-Backend:  Java 17 + Spring Boot 3.x + MariaDB + OpenAI GPT-4
+Backend:  Java 17 + Spring Boot 3.x + MariaDB + Anthropic Claude
 Frontend: Vue 3 + Tailwind CSS
 ```
 
@@ -111,7 +111,7 @@ cd emotion-flowerbed-api
 
 # 환경 변수 설정
 cp .env.example .env
-# DB 정보 및 OpenAI API 키 입력
+# DB 정보 및 Claude API 키 입력
 
 # 실행
 ./gradlew bootRun
@@ -261,7 +261,7 @@ Response:
 - [ ] Repository 작성
 - [ ] DiaryContentValidator 구현
 - [ ] DiarySecurityValidator 구현
-- [ ] LLMClient 구현 (OpenAI)
+- [ ] LLMClient 구현 (Claude)
 - [ ] DiaryEmotionService 구현
 - [ ] DiaryController 구현
 - [ ] GlobalExceptionHandler 구현
@@ -344,7 +344,7 @@ MIT License - 자유롭게 사용 가능합니다.
 ## 🙏 감사의 말
 
 이 프로젝트는 다음 기술들을 사용합니다:
-- OpenAI GPT-4 for emotion analysis
+- Anthropic Claude for emotion analysis
 - Spring Boot for robust backend
 - Vue 3 for reactive frontend
 - MariaDB for reliable data storage
