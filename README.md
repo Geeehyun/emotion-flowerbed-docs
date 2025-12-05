@@ -27,7 +27,7 @@
 
 ### 기술 스택
 ```
-Backend:  Java 17 + Spring Boot 3.x + MariaDB + OpenAI GPT-4
+Backend:  Java 21 + Spring Boot 3.3.5 + MariaDB + Anthropic Claude
 Frontend: Vue 3 + Tailwind CSS
 ```
 
@@ -71,18 +71,11 @@ Frontend: Vue 3 + Tailwind CSS
 
 ### 핵심 문서
 - **[PROJECT-INFO.md](PROJECT-INFO.md)** - 프로젝트 전체 정보 ⭐
-- **[database-schema.sql](database-schema.sql)** - 실행 가능한 DB 스키마 ⭐
-- **[EmotionCode.java](EmotionCode.java)** - Java Enum 클래스 ⭐
 
 ### 설계 문서
 - **[database-design.md](database-design.md)** - DB 설계 상세 (ERD, 쿼리 패턴)
 - **[emotion-system.md](emotion-system.md)** - 20개 감정 체계 정의
 - **[emotion-code-guide.md](emotion-code-guide.md)** - 영문 코드 시스템 가이드
-
-### 구현 가이드
-- **[backend-README.md](backend-README.md)** - Backend API 구현 가이드
-- **[frontend-README.md](frontend-README.md)** - Frontend 구현 가이드
-- **[diary-validation-guide.md](diary-validation-guide.md)** - 입력 검증 가이드
 
 ### 분석 문서
 - **[diary-emotion-analysis.md](diary-emotion-analysis.md)** - 초기 분석 설계
@@ -111,7 +104,7 @@ cd emotion-flowerbed-api
 
 # 환경 변수 설정
 cp .env.example .env
-# DB 정보 및 OpenAI API 키 입력
+# DB 정보 및 your_claude_api_key 키 입력
 
 # 실행
 ./gradlew bootRun
@@ -315,42 +308,6 @@ Response:
 
 ---
 
-## 🤝 기여하기
-
-이슈나 PR은 언제나 환영입니다!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📝 라이선스
-
-MIT License - 자유롭게 사용 가능합니다.
-
----
-
-## 👤 개발자
-
-**Geeehyun**
-- GitHub: [@Geeehyun](https://github.com/Geeehyun)
-- Email: (추가 예정)
-
----
-
-## 🙏 감사의 말
-
-이 프로젝트는 다음 기술들을 사용합니다:
-- OpenAI GPT-4 for emotion analysis
-- Spring Boot for robust backend
-- Vue 3 for reactive frontend
-- MariaDB for reliable data storage
-
----
-
 ## 📚 관련 문서
 
 - [프로젝트 전체 정보](PROJECT-INFO.md)
@@ -362,5 +319,3 @@ MIT License - 자유롭게 사용 가능합니다.
 - [입력 검증 가이드](diary-validation-guide.md)
 
 ---
-
-**⭐ 이 프로젝트가 마음에 드신다면 Star를 눌러주세요!**
