@@ -61,11 +61,20 @@ CREATE TABLE emotions (
     emotion_name_kr VARCHAR(20) NOT NULL,  -- '기쁨', '행복'...
     emotion_name_en VARCHAR(20) NOT NULL,  -- 'Joy', 'Happiness'...
     flower_name VARCHAR(50) NOT NULL,
+    flower_name_en VARCHAR(50) NULL,       -- 꽃 학명 (신규)
     flower_meaning VARCHAR(100) NOT NULL,
     image_file_3d VARCHAR(100) NOT NULL,
     image_file_realistic VARCHAR(100) NOT NULL,
     is_positive BOOLEAN NOT NULL,
     display_order INT NOT NULL,
+
+    -- 신규 추가: 꽃 상세 정보
+    color VARCHAR(50) NULL,                -- 꽃 색상
+    blooming_season VARCHAR(50) NULL,      -- 개화 시기
+    origin VARCHAR(100) NULL,              -- 원산지
+    fragrance VARCHAR(100) NULL,           -- 향기
+    meaning_story TEXT NULL,               -- 꽃말 유래
+    fun_fact TEXT NULL,                    -- 재미있는 사실
     ...
 );
 ```

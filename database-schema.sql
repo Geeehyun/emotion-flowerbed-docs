@@ -37,16 +37,25 @@ CREATE TABLE emotions (
     emotion_name_kr VARCHAR(20) NOT NULL COMMENT '감정명 (한글)',
     emotion_name_en VARCHAR(20) NOT NULL COMMENT '감정명 (영문)',
     flower_name VARCHAR(50) NOT NULL COMMENT '꽃 이름',
+    flower_name_en VARCHAR(50) NULL COMMENT '꽃 학명',
     flower_meaning VARCHAR(100) NOT NULL COMMENT '꽃말',
     image_file_3d VARCHAR(100) NOT NULL COMMENT '3D 이미지 파일명',
     image_file_realistic VARCHAR(100) NOT NULL COMMENT '실사 이미지 파일명',
     is_positive BOOLEAN NOT NULL COMMENT '긍정 감정 여부',
     display_order INT NOT NULL COMMENT '표시 순서',
-    
+
+    -- 신규 추가: 꽃 상세 정보
+    color VARCHAR(50) NULL COMMENT '꽃 색상',
+    blooming_season VARCHAR(50) NULL COMMENT '개화 시기',
+    origin VARCHAR(100) NULL COMMENT '원산지',
+    fragrance VARCHAR(100) NULL COMMENT '향기',
+    meaning_story TEXT NULL COMMENT '꽃말 유래 (긴 텍스트)',
+    fun_fact TEXT NULL COMMENT '재미있는 사실 (긴 텍스트)',
+
     -- 메타데이터
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '생성일시',
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '수정일시',
-    
+
     INDEX idx_display_order (display_order)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='감정 마스터';
 
@@ -117,7 +126,7 @@ INSERT INTO emotions (emotion_code, emotion_name_kr, emotion_name_en, flower_nam
 
 -- 사용자별 최근 일기 목록 (삭제되지 않은 것만)
 CREATE OR REPLACE VIEW v_user_recent_diaries AS
-SELECT 
+SELECT
     d.diary_id,
     d.user_id,
     d.diary_date,
@@ -127,11 +136,18 @@ SELECT
     e.emotion_name_kr,
     e.emotion_name_en,
     e.flower_name,
+    e.flower_name_en,
     e.flower_meaning,
     d.created_at,
     e.image_file_3d,
     e.image_file_realistic,
-    e.is_positive
+    e.is_positive,
+    e.color,
+    e.blooming_season,
+    e.origin,
+    e.fragrance,
+    e.meaning_story,
+    e.fun_fact
 FROM diaries d
 LEFT JOIN emotions e ON d.core_emotion_code = e.emotion_code
 WHERE d.deleted_at IS NULL
