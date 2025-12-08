@@ -85,40 +85,23 @@
   ],
   "coreEmotion": "기쁨",
   "reason": "왜 이 감정을 대표로 선택했는지 설명",
-  "flowerInfo": {
-    "name": "해바라기",
-    "nameEn": "Helianthus annuus",
-    "meaning": "당신을 보면 행복해요",
-    "color": "밝은 노란색",
-    "bloomingSeason": "7월 ~ 9월 (여름)",
-    "origin": "북아메리카",
-    "fragrance": "거의 없음",
-    "meaningStory": "해바라기는 항상 태양을 향해 고개를 돌리는 특성 때문에 '당신을 보면 행복해요'라는 꽃말이 생겼습니다. 사랑하는 사람을 바라보는 마음을 상징합니다.",
-    "funFact": "해바라기 한 송이에는 1,000~2,000개의 씨앗이 들어있으며, 나선형 패턴을 따라 배열되어 있습니다."
-  }
+  "flower": "해바라기",
+  "floriography": "당신을 보면 행복해요"
 }
 ```
 
 ### 필드 설명
 
-| 필드                      | 타입    | 필수 | 설명                          |
-| ------------------------- | ------- | ---- | ----------------------------- |
-| summary                   | string  | Y    | 일기 내용 요약 (2-3문장)      |
-| emotions                  | array   | Y    | 감지된 감정들 (최대 3개)      |
-| emotions[].emotion        | string  | Y    | 감정명 (20개 중 하나)         |
-| emotions[].percent        | integer | Y    | 감정 비율 (합계 100%)         |
-| coreEmotion               | string  | Y    | 대표 감정 (20개 중 하나)      |
-| reason                    | string  | Y    | 대표 감정 선택 이유 (1-2문장) |
-| flowerInfo                | object  | Y    | 꽃 상세 정보                  |
-| flowerInfo.name           | string  | Y    | 꽃 이름 (한글)                |
-| flowerInfo.nameEn         | string  | N    | 꽃 학명 (영문)                |
-| flowerInfo.meaning        | string  | Y    | 꽃말                          |
-| flowerInfo.color          | string  | N    | 꽃 색상                       |
-| flowerInfo.bloomingSeason | string  | N    | 개화 시기                     |
-| flowerInfo.origin         | string  | N    | 원산지                        |
-| flowerInfo.fragrance      | string  | N    | 향기 설명                     |
-| flowerInfo.meaningStory   | string  | N    | 꽃말 유래 (2-3줄)             |
-| flowerInfo.funFact        | string  | N    | 재미있는 사실 (1-2줄)         |
+| 필드               | 타입    | 필수 | 설명                          |
+| ------------------ | ------- | ---- | ----------------------------- |
+| summary            | string  | Y    | 일기 내용 요약 (2-3문장)      |
+| emotions           | array   | Y    | 감지된 감정들 (최대 3개)      |
+| emotions[].emotion | string  | Y    | 감정명 (20개 중 하나)         |
+| emotions[].percent | integer | Y    | 감정 비율 (합계 100%)         |
+| coreEmotion        | string  | Y    | 대표 감정 (20개 중 하나)      |
+| reason             | string  | Y    | 대표 감정 선택 이유 (1-2문장) |
+| flower             | string  | Y    | 꽃 이름                       |
+| floriography       | string  | Y    | 꽃말                          |
 
 ---
 
