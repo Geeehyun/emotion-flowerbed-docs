@@ -79,11 +79,6 @@ Frontend: Vue 3 + Tailwind CSS
 - **[emotion-system.md](emotion-system.md)** - 20개 감정 체계 정의
 - **[emotion-code-guide.md](emotion-code-guide.md)** - 영문 코드 시스템 가이드
 
-### 구현 가이드
-- **[backend-README.md](backend-README.md)** - Backend API 구현 가이드
-- **[frontend-README.md](frontend-README.md)** - Frontend 구현 가이드
-- **[diary-validation-guide.md](diary-validation-guide.md)** - 입력 검증 가이드
-
 ### 분석 문서
 - **[diary-emotion-analysis.md](diary-emotion-analysis.md)** - 초기 분석 설계
 
@@ -362,5 +357,3 @@ MIT License - 자유롭게 사용 가능합니다.
 - [입력 검증 가이드](diary-validation-guide.md)
 
 ---
-
-**⭐ 이 프로젝트가 마음에 드신다면 Star를 눌러주세요!**
